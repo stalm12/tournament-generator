@@ -4,5 +4,8 @@
     <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="inputTN" name="tnInput"></textarea>
   </mat-form-field>
 </form>
+<h1>Number of Participants: {{participants.length}}</h1>
+<h1>Size of Competition: {{calculateTournamentSize(participants.length)}}</h1>
+<h1>Number of Participants in PreRound: {{calculateNumberOfTnInPreRound(participants.length)}}</h1>
 <button mat-raised-button (click)="import()">Importieren</button>
 <app-participant *ngFor="let participant of participants" [participant]="participant"></app-participant>
